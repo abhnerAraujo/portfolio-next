@@ -1,0 +1,19 @@
+:root{
+  --header-background: 9, 24, 51;
+  --header-foreground: 255, 255, 255;
+  --footer-foreground: 39, 41, 50;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-background: 209, 197, 192;
+    --header-foreground: 39, 41, 50;
+  }
+}
+
+section > h2 {
+  @media screen and (min-width: 1024px){
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+}

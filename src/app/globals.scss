@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 9, 24, 51;
+    --background-end-rgb: 9, 24, 51;
   }
 }
 
@@ -30,4 +30,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+header {
+  background: rgb(var(--header-background));
+  color: rgb(var(--header-foreground));
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);;
+  -moz-box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);;
+  box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);
+}
+
+footer {
+  background-color: rgb(var(--footer-foreground));
+}
+
+h2 {
+  text-shadow: -4px 4px 0px rgba(113,28,145,1);
+}
+
+span.highlight {
+  color: rgb(203, 29, 205);
 }
