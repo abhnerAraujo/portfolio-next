@@ -1,0 +1,41 @@
+@mixin gradient($percentStart, $percentEnd) {
+  background: linear-gradient(
+    to right,
+    rgba(rgb(113, 28, 145), 1),
+    rgba(rgb(203, 29, 205), 1)
+  );
+}
+
+.skill-level {
+  display: flex;
+  flex-direction: row;
+  gap: .5rem;
+  width: 100%;
+  align-items: center;
+
+  > .bar {
+    flex: 1;
+    height: 8px;
+    border-radius: 15px;
+    background: rgba(113, 28, 145, .3);
+  }
+
+  > .bar.-filled:first-child,
+  > .bar.-filled:nth-child(2) {
+    background: rgb(113, 28, 145);
+  }
+
+  > .bar.-filled:nth-child(3) {
+    background: linear-gradient(
+      to right,
+      rgba(rgb(113, 28, 145), 1),
+      rgba(rgb(203, 29, 205), 1)
+    );
+  }
+
+  > .bar.-filled:nth-child(4),
+  > .bar.-filled:last-child {
+    background: rgba(rgb(203, 29, 205), 1);
+  }
+
+}

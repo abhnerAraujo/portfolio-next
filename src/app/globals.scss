@@ -6,6 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-background: 9, 24, 51;
+  --header-foreground: 255, 255, 255;
+  --footer-foreground: 39, 41, 50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +16,8 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 9, 24, 51;
     --background-end-rgb: 9, 24, 51;
+    --header-background: 209, 197, 192;
+    --header-foreground: 39, 41, 50;
   }
 }
 
