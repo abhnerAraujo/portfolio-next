@@ -1,5 +1,6 @@
 import { Chivo, Orbitron } from "next/font/google";
 import Image from "next/image";
+import { Project } from "./components/project";
 import { Skill } from "./components/skill";
 import "./page.scss";
 
@@ -18,6 +19,7 @@ export default function Home() {
     <main className={`${baseClass} ${desktopClass}`}>
       <AboutSection></AboutSection>
       <SkillsSection></SkillsSection>
+      <ProjectsSection />
     </main>
   );
 }
@@ -25,7 +27,7 @@ export default function Home() {
 function SkillsSection() {
   const skills: { skill: string; level: number }[] = [
     { skill: "angular", level: 5 },
-    { skill: "css", level: 4 },
+    { skill: "sass", level: 4 },
     { skill: "figma", level: 3 },
     { skill: "typescript", level: 5 },
     { skill: "react", level: 3 },
@@ -85,6 +87,44 @@ function AboutSection() {
           clean and scalable solutions.
         </p>
       </div>
+    </section>
+  );
+}
+
+function ProjectsSection() {
+  const projects = [
+    {
+      title: "PORTFOLIO",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula consequat ante, eget consectetur ipsum tristique nec",
+      img: "/img/project1.jpg",
+      link: "https://www.google.com",
+      stack: ["react", "next", "typescript"],
+    },
+    {
+      title: "BLOG",
+      description: "Lorem ipsum dolor sit amet",
+      img: "/img/project2.jpg",
+      link: "https://www.google.com",
+      stack: ["react", "next", "strapi", "typescript"],
+    },
+    {
+      title: "AI QUIZ",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula consequat ante, eget consectetur ipsum tristique nec",
+      img: "/img/project2.jpg",
+      link: "https://www.google.com",
+      stack: ["angular", "openai", "typescript"],
+    },
+  ];
+  return (
+    <section id="projects" className="flex flex-row gap-10 justify-between">
+      <div className="flex-1 grid grid-cols-1 gap-10 lg:grid-cols-2">
+        {projects.map((project, idx) => (
+          <Project project={project} key={idx} />
+        ))}
+      </div>
+      <h2 className={heading2Class}>PROJECTS</h2>
     </section>
   );
 }

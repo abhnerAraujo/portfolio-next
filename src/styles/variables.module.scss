@@ -1,0 +1,22 @@
+$pale-silver: #d1c5c0;
+$purple: #711c91;
+$steel-pink: #cb1dcd;
+$raisin-black: #272932;
+$primary-color: #091833;
+
+$radii-xs: 0.125rem;
+$radii-sm: 0.25rem;
+$radii-md: 0.5rem;
+$radii-lg: 0.75rem;
+$radii-xl: 1rem;
+
+$primaryFontColor: var(--primary-font-color);
+$secondaryFontColor: var(--secondary-font-color);
+
+:export {
+  paleSilver: $pale-silver;
+  purple: $purple;
+  steelPink: $steel-pink;
+  raisinBlack: $raisin-black;
+  primaryColor: $primary-color;
+}

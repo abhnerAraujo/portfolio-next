@@ -2,7 +2,7 @@ import Image from "next/image";
 import "./skill.scss";
 
 export function Skill({ skill, level }: { skill: string; level: number }) {
-  const imageSrc = "/img/skills/" + skill + ".png";
+  const imageSrc = "/skills/" + skill + ".svg";
 
   return (
     <>
