@@ -13,7 +13,7 @@ export function Project({ project }: ProjectProps) {
         </h3>
         <div className="flex flex-row gap-2">
           {project.stack.map((tech, idx) => (
-            <SkillIcon tech={tech} size="small" key={idx}></SkillIcon>
+            <SkillIcon tech={tech} size="small" key={idx} />
           ))}
         </div>
       </div>

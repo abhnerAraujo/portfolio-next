@@ -36,7 +36,7 @@ interface TechItem {
   icon: string;
   description: string;
 }
-const TechSkill: { [key in Tech]: TechItem } = {
+export const TechSkill: { [key in Tech]: TechItem } = {
   angular: {
     tech: "angular",
     icon: "/skills/angular.svg",
