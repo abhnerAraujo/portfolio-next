@@ -1,13 +1,11 @@
-import Image from "next/image";
-import "./skill.scss";
+import { SkillIcon, Tech } from "../atoms/skill-icon";
+import "./style.scss";
 
-export function Skill({ skill, level }: { skill: string; level: number }) {
-  const imageSrc = "/skills/" + skill + ".svg";
-
+export function Skill({ tech, level }: SkillProps) {
   return (
     <>
       <div className="flex flex-row items-center gap-2">
-        <Image src={imageSrc} width={50} height={50} alt={skill}></Image>
+        <SkillIcon tech={tech} size="medium"></SkillIcon>
         <div className="skill-level">
           {[...Array(5)].map((_, i) => (
             <div className={`bar ${i < level ? "-filled" : ""}`} key={i}></div>
@@ -16,4 +14,9 @@ export function Skill({ skill, level }: { skill: string; level: number }) {
       </div>
     </>
   );
+}
+
+interface SkillProps {
+  tech: Tech;
+  level: number;
 }

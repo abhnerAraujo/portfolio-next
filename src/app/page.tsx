@@ -1,5 +1,6 @@
 import { Chivo, Orbitron } from "next/font/google";
 import Image from "next/image";
+import { Tech } from "./components/atoms/skill-icon";
 import { Project } from "./components/project";
 import { Skill } from "./components/skill";
 import "./page.scss";
@@ -25,16 +26,16 @@ export default function Home() {
 }
 
 function SkillsSection() {
-  const skills: { skill: string; level: number }[] = [
-    { skill: "angular", level: 5 },
-    { skill: "sass", level: 4 },
-    { skill: "figma", level: 3 },
-    { skill: "typescript", level: 5 },
-    { skill: "react", level: 3 },
-    { skill: "aws", level: 2 },
-    { skill: "html", level: 5 },
-    { skill: "node", level: 3 },
-    { skill: "java", level: 2 },
+  const skills: { tech: Tech; level: number }[] = [
+    { tech: "angular", level: 5 },
+    { tech: "sass", level: 4 },
+    { tech: "figma", level: 3 },
+    { tech: "typescript", level: 5 },
+    { tech: "react", level: 3 },
+    { tech: "aws", level: 2 },
+    { tech: "html", level: 5 },
+    { tech: "node", level: 3 },
+    { tech: "java", level: 2 },
   ];
 
   return (

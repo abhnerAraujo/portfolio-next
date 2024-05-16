@@ -1,11 +1,3 @@
-@mixin gradient($percentStart, $percentEnd) {
-  background: linear-gradient(
-    to right,
-    rgba(rgb(113, 28, 145), 1),
-    rgba(rgb(203, 29, 205), 1)
-  );
-}
-
 .skill-level {
   display: flex;
   flex-direction: row;
