@@ -1,7 +1,7 @@
 "use client";
 import variables from "@/styles/variables.module.scss";
-import Image from "next/image";
 import { TextButton } from "../atoms/button";
+import { SkillIcon, Tech } from "../atoms/skill-icon";
 import "./project.scss";
 
 export function Project({ project }: ProjectProps) {
@@ -13,14 +13,7 @@ export function Project({ project }: ProjectProps) {
         </h3>
         <div className="flex flex-row gap-2">
           {project.stack.map((tech, idx) => (
-            <Image
-              className="w-6"
-              key={idx}
-              alt="tech"
-              src={"/skills/" + tech + ".svg"}
-              width={0}
-              height={0}
-            ></Image>
+            <SkillIcon tech={tech} size="small" key={idx}></SkillIcon>
           ))}
         </div>
       </div>
@@ -48,12 +41,12 @@ export function Project({ project }: ProjectProps) {
   );
 }
 
-interface ProjectProps {
+export interface ProjectProps {
   project: {
     title: string;
     description: string;
     img: string;
     link: string;
-    stack: string[];
+    stack: Tech[];
   };
 }

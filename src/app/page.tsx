@@ -1,7 +1,7 @@
 import { Chivo, Orbitron } from "next/font/google";
 import Image from "next/image";
 import { Tech } from "./components/atoms/skill-icon";
-import { Project } from "./components/project";
+import { Project, ProjectProps } from "./components/project";
 import { Skill } from "./components/skill";
 import "./page.scss";
 
@@ -93,7 +93,7 @@ function AboutSection() {
 }
 
 function ProjectsSection() {
-  const projects = [
+  const projects: ProjectProps["project"][] = [
     {
       title: "PORTFOLIO",
       description:
