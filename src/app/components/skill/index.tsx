@@ -1,4 +1,4 @@
-import { SkillIcon, Tech } from "../atoms/skill-icon";
+import { SkillIcon, Tech } from "../skill-icon";
 import "./styles.scss";
 
 export function Skill({ tech, level }: SkillProps) {

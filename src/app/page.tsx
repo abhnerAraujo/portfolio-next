@@ -1,8 +1,8 @@
 import { Chivo, Orbitron } from "next/font/google";
 import Image from "next/image";
-import { Tech } from "./components/atoms/skill-icon";
 import { Project, ProjectProps } from "./components/project";
 import { Skill } from "./components/skill";
+import { Tech } from "./components/skill-icon";
 import "./page.scss";
 
 const orbitronRegular = Orbitron({ subsets: ["latin"], weight: "400" });

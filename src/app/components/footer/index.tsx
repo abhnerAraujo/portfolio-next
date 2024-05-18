@@ -2,9 +2,9 @@
 import "./styles.scss";
 
 import { Orbitron } from "next/font/google";
-import * as Button from "../atoms/button";
-import { Input } from "../atoms/input";
-import { Textarea } from "../atoms/textarea";
+import * as Button from "../button";
+import { Input } from "../input";
+import { Textarea } from "../textarea";
 
 const orbitron = Orbitron({ subsets: ["latin"], weight: "600" });
 

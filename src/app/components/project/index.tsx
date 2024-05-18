@@ -1,7 +1,7 @@
 "use client";
 import variables from "@/styles/variables.module.scss";
-import * as Button from "../atoms/button";
-import { SkillIcon, Tech } from "../atoms/skill-icon";
+import * as Button from "../button";
+import { SkillIcon, Tech } from "../skill-icon";
 import "./project.scss";
 
 export function Project({ project }: ProjectProps) {
