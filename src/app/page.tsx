@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Project, ProjectProps } from "./components/project";
 import { Skill } from "./components/skill";
 import { Tech } from "./components/skill-icon";
+import { Social } from "./components/social";
 import "./page.scss";
 
 const orbitronRegular = Orbitron({ subsets: ["latin"], weight: "400" });
@@ -71,22 +72,29 @@ function AboutSection() {
         width={500}
         height={500}
       />
-      <div className="flex-1 flex flex-col">
-        <h1 className={heading1Class}>HI,</h1>
-        <h1 className={heading1Class}>Nice to meet you!</h1>
-        <p className="text-2xl text-center lg:text-start mt-3">
-          I’m <span className={highlightClass}>Abhner Araujo</span>, full stack
-          developer, coffee enthusiast, song addicted and professional movie
-          watcher.
-        </p>
-        <p className="text-2xl text-center lg:text-start mt-1">
-          I am a web developer with over 6 years of experience, passionately
-          dedicated to creating impactful solutions. I am motivated by the
-          constant challenge of learning and the desire to create meaningful
-          digital experiences. My passion for web development goes beyond code;
-          I focus on delivering intuitive and visually appealing UIs as well as
-          clean and scalable solutions.
-        </p>
+      <div className="flex-1 flex flex-col gap-3">
+        <div>
+          <h1 className={heading1Class}>HI,</h1>
+          <h1 className={heading1Class}>Nice to meet you!</h1>
+        </div>
+        <div>
+          <Social />
+        </div>
+        <div>
+          <p className="text-2xl text-center lg:text-start mt-3 mb-3">
+            I’m <span className={highlightClass}>Abhner Araujo</span>, full
+            stack developer, coffee enthusiast, song addicted and professional
+            movie watcher.
+          </p>
+          <p className="text-2xl text-center lg:text-start mt-1">
+            I am a web developer with over 6 years of experience, passionately
+            dedicated to creating impactful solutions. I am motivated by the
+            constant challenge of learning and the desire to create meaningful
+            digital experiences. My passion for web development goes beyond
+            code; I focus on delivering intuitive and visually appealing UIs as
+            well as clean and scalable solutions.
+          </p>
+        </div>
       </div>
     </section>
   );
