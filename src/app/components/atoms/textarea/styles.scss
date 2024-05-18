@@ -1,0 +1,5 @@
+@import "input";
+
+textarea {
+  @include baseInput;
+}

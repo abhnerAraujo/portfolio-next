@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <main className={`${baseClass} ${desktopClass}`}>
-      <AboutSection></AboutSection>
-      <SkillsSection></SkillsSection>
+      <AboutSection />
+      <SkillsSection />
       <ProjectsSection />
     </main>
   );

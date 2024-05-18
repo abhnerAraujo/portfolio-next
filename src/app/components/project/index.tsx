@@ -1,6 +1,6 @@
 "use client";
 import variables from "@/styles/variables.module.scss";
-import { TextButton } from "../atoms/button";
+import * as Button from "../atoms/button";
 import { SkillIcon, Tech } from "../atoms/skill-icon";
 import "./project.scss";
 
@@ -28,13 +28,12 @@ export function Project({ project }: ProjectProps) {
           }}
         ></div>
         <div className="flex flex-row justify-end gap-2">
-          <TextButton onClick={() => console.log("click")}>See Code</TextButton>
-          <TextButton
-            disabled={!!project.link}
-            onClick={() => console.log("click")}
-          >
-            Open App
-          </TextButton>
+          <Button.Root type="text">
+            <button>See code</button>
+          </Button.Root>
+          <Button.Root type="text">
+            <button disabled={!!project.link}>Open App</button>
+          </Button.Root>
         </div>
       </div>
     </div>
