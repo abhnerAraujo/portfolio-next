@@ -39,21 +39,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  scroll-behavior: smooth;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-
-header {
-  background: rgb(var(--header-background));
-  color: rgb(var(--header-foreground));
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);;
-  -moz-box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);;
-  box-shadow: 0px 5px 5px 0px rgba(255, 255, 255, 0.15);
 }
 
 footer {

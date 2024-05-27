@@ -1,6 +1,16 @@
+@import "variables.module";
+
 section > h2 {
   @media screen and (min-width: 1024px){
     writing-mode: vertical-rl;
     text-orientation: upright;
   }
+}
+
+.about {
+  background: linear-gradient(
+    to bottom,
+    $purple 1%,
+    $primary-color,
+    transparent);
 }

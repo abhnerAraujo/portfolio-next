@@ -14,7 +14,9 @@ export function Footer() {
 
   return (
     <>
-      <h2 className={heading2Class}>Contact Me</h2>
+      <h2 id="contact" className={heading2Class}>
+        Contact Me
+      </h2>
 
       <div className="flex">
         <form className="lg:w-1/2 w-full flex-1">
