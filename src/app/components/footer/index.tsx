@@ -1,7 +1,9 @@
 "use client";
 import "./styles.scss";
 
+import { useEmail } from "@/app/hooks/use-email";
 import { Orbitron } from "next/font/google";
+import { useEffect } from "react";
 import * as Button from "../button";
 import { Input } from "../input";
 import { Social } from "../social";
@@ -11,6 +13,9 @@ const orbitron = Orbitron({ subsets: ["latin"], weight: "600" });
 
 export function Footer() {
   const heading2Class = "text-4xl " + orbitron.className;
+  const { isSubmitting, stateMessage, sendEmail } = useEmail();
+
+  useEffect(() => {}, [isSubmitting, stateMessage]);
 
   return (
     <>
@@ -19,7 +24,7 @@ export function Footer() {
       </h2>
 
       <div className="flex">
-        <form className="lg:w-1/2 w-full flex-1">
+        <form className="lg:w-1/2 w-full flex-1" onSubmit={sendEmail}>
           <div className="grid w-full mb-4">
             <div className="flex align-baseline justify-between">
               <label>Email</label>
@@ -27,7 +32,14 @@ export function Footer() {
               <span className="hidden">Required</span>
             </div>
             <div className="w-full">
-              <Input size="full" placeholder="Email" />
+              <Input>
+                <input
+                  type="text"
+                  name="from_email"
+                  placeholder="name@company.com"
+                  className="rounded-lg p-4 h-14 text-lg w-full"
+                />
+              </Input>
             </div>
           </div>
           <div className="grid w-full mb-4">
@@ -37,7 +49,13 @@ export function Footer() {
               <span className="hidden">Required</span>
             </div>
             <div className="w-full">
-              <Textarea size="full" placeholder="Say something..." />
+              <Textarea>
+                <textarea
+                  name="message"
+                  placeholder="Say something..."
+                  className="rounded-lg p-4 min-h-24 text-lg w-full"
+                ></textarea>
+              </Textarea>
             </div>
           </div>
 
@@ -46,6 +64,9 @@ export function Footer() {
               <button className="w-full lg:w-fit">Send</button>
             </Button.Root>
           </div>
+          {stateMessage && (
+            <div className="text-center text-lg mt-4">{stateMessage}</div>
+          )}
         </form>
         <div className="flex-1 flex flex-col justify-end items-end">
           <Social />
