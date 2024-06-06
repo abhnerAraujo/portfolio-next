@@ -4,41 +4,14 @@
 
 @import 'variables.module';
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --header-background: 9, 24, 51;
-  --header-foreground: 255, 255, 255;
-  --footer-foreground: 39, 41, 50;
-  --pale-silver: #d1c5c0;
-  --purple: #711c91;
-  --steel-pink: #cb1dcd;
-  --raisin-black: #272932;
-  --primary-font-color: white;
-  --secondary-font-color: var(--raisin-black);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 9, 24, 51;
-    --background-end-rgb: 9, 24, 51;
-    --header-background: 209, 197, 192;
-    --header-foreground: 39, 41, 50;
-    --primary-font-color: var(--raisin-black);
-    --secondary-font-color: white;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(255, 255, 255);
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(9, 24, 51)
     )
-    rgb(var(--background-start-rgb));
+    rgb(9, 24, 51);
   scroll-behavior: smooth;
 }
 
@@ -49,13 +22,13 @@ body {
 }
 
 footer {
-  background-color: rgb(var(--footer-foreground));
+  background-color: rgb(39, 41, 50);
 }
 
 h2 {
-  text-shadow: -4px 4px 0px var(--purple);
+  text-shadow: -4px 4px 0px $purple;
 }
 
 span.highlight {
-  color: var(--steel-pink);
+  color: $steel-pink;
 }

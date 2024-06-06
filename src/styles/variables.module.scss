@@ -11,8 +11,8 @@ $radii-md: 0.5rem;
 $radii-lg: 0.75rem;
 $radii-xl: 1rem;
 
-$primaryFontColor: var(--primary-font-color);
-$secondaryFontColor: var(--secondary-font-color);
+$primaryFontColor: $raisin-black;
+$secondaryFontColor: white;
 
 :export {
   paleSilver: $pale-silver;
