@@ -18,7 +18,7 @@ export function Footer() {
   useEffect(() => {}, [isSubmitting, stateMessage]);
 
   return (
-    <>
+    <div className="flex flex-col gap-8 lg:max-w-screen-xl w-full lg:m-auto">
       <h2 id="contact" className={heading2Class}>
         Contact Me
       </h2>
@@ -72,6 +72,6 @@ export function Footer() {
           <Social />
         </div>
       </div>
-    </>
+    </div>
   );
 }

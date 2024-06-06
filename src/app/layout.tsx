@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={chivo.className}>
         {children}
-        <footer className="flex flex-col p-10 lg:pr-20 lg:pl-20 gap-8 pb-36">
+        <footer className="pt-10 pb-36">
           <Footer />
         </footer>
       </body>

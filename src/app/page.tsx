@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <main className={`${baseClass} ${desktopClass}`}>
       <AboutSection />
-      <div className="flex flex-col gap-10 lg:pr-28 lg:pl-28">
+      <div className="flex flex-col gap-10 lg:max-w-screen-xl lg:m-auto">
         <SkillsSection />
         <ProjectsSection />
       </div>
@@ -59,9 +59,10 @@ function SkillsSection() {
 }
 
 function AboutSection() {
-  const aboutSectionDesktop = "lg:flex-row lg:gap-16 lg:pr-28 lg:pl-28";
+  const aboutSectionDesktop =
+    "lg:flex-row lg:gap-16 lg:max-w-screen-xl lg:m-auto";
   const aboutSectionBase =
-    "flex flex-col items-center lg:flex-row gap-10 pr-6 pl-6";
+    "flex flex-col items-center lg:flex-row gap-10 pr-6 pl-6 w-full";
   const highlightClass = "highlight text-center " + chivoBold.className;
   const heading1Class =
     "text-5xl mb-3 text-center lg:text-start " + orbitronRegular.className;
