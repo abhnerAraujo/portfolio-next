@@ -6,7 +6,7 @@ import "./project.scss";
 
 export function Project({ project }: ProjectProps) {
   return (
-    <div className="project-card flex flex-col gap-4 rounded-lg shadow-lg transition-all w-full min-h-10 px-10 py-5 justify-between">
+    <div className="project-card flex flex-col gap-4 rounded-lg shadow-lg transition-all w-full min-h-10 px-5 lg:px-10 py-5 justify-between">
       <div className="flex flex-col gap-4">
         <h3 className="text-4xl text-start underline font-semibold italic">
           {project.title}

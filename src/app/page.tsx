@@ -14,13 +14,10 @@ const heading2Class =
   "text-4xl text-center lg:text-start " + orbitroSemibold.className;
 
 export default function Home() {
-  const baseClass = "flex min-h-screen flex-col justify-between gap-20 mb-10"; // mt-10  pl-6 pr-6
-  const desktopClass = ""; //"lg:pl-20 lg:pr-20";
-
   return (
-    <main className={`${baseClass} ${desktopClass}`}>
+    <main className="flex min-h-screen flex-col justify-between gap-20 mb-10">
       <AboutSection />
-      <div className="flex flex-col gap-10 lg:max-w-screen-xl lg:m-auto">
+      <div className="flex flex-col gap-10 px-6 lg:max-w-screen-xl lg:m-auto">
         <SkillsSection />
         <ProjectsSection />
       </div>
@@ -45,10 +42,10 @@ function SkillsSection() {
     <>
       <section
         id="skills"
-        className="mb-10 flex flex-col lg:flex-row lg:gap-28 align-center"
+        className="mb-10 flex flex-col lg:flex-row gap-10 justify-between align-center"
       >
         <h2 className={heading2Class}>SKILLS</h2>
-        <div className="flex-1 grid grid-cols-3 gap-y-10 gap-x-20">
+        <div className="flex-1 flex flex-col lg:grid lg:grid-cols-3 gap-y-10 gap-x-20">
           {skills.map((skill, idx) => (
             <Skill {...skill} key={idx}></Skill>
           ))}
@@ -62,7 +59,7 @@ function AboutSection() {
   const aboutSectionDesktop =
     "lg:flex-row lg:gap-16 lg:max-w-screen-xl lg:m-auto";
   const aboutSectionBase =
-    "flex flex-col items-center lg:flex-row gap-10 pr-6 pl-6 w-full";
+    "flex flex-col items-center lg:flex-row gap-10 px-6 w-full";
   const highlightClass = "highlight text-center " + chivoBold.className;
   const heading1Class =
     "text-5xl mb-3 text-center lg:text-start " + orbitronRegular.className;
@@ -72,7 +69,7 @@ function AboutSection() {
     <div className="about" id="about">
       <header className="flex flex-row items-center justify-between p-6 mb-20">
         <h4 className={titleClass}>&lt;Abhner/&gt;</h4>
-        <nav className="flex gap-4">
+        <nav className="md:flex gap-4 hidden">
           <a href="#about" className="font-semibold">
             ABOUT
           </a>
@@ -100,7 +97,7 @@ function AboutSection() {
             <h1 className={heading1Class}>HI,</h1>
             <h1 className={heading1Class}>Nice to meet you!</h1>
           </div>
-          <div>
+          <div className="flex justify-center lg:justify-start">
             <Social />
           </div>
           <div>
@@ -151,7 +148,10 @@ function ProjectsSection() {
     },
   ];
   return (
-    <section id="projects" className="flex flex-row gap-10 justify-between">
+    <section
+      id="projects"
+      className="flex flex-col-reverse lg:flex-row gap-10 justify-between align-center"
+    >
       <div className="flex-1 grid grid-cols-1 gap-10 lg:grid-cols-2">
         {projects.map((project, idx) => (
           <Project project={project} key={idx} />

@@ -18,12 +18,12 @@ export function Footer() {
   useEffect(() => {}, [isSubmitting, stateMessage]);
 
   return (
-    <div className="flex flex-col gap-8 lg:max-w-screen-xl w-full lg:m-auto">
+    <div className="flex flex-col gap-8 px-10 lg:max-w-screen-xl w-full lg:m-auto">
       <h2 id="contact" className={heading2Class}>
         Contact Me
       </h2>
 
-      <div className="flex">
+      <div className="flex flex-col-reverse lg:flex-row gap-10">
         <form className="lg:w-1/2 w-full flex-1" onSubmit={sendEmail}>
           <div className="grid w-full mb-4">
             <div className="flex align-baseline justify-between">
@@ -68,7 +68,7 @@ export function Footer() {
             <div className="text-center text-lg mt-4">{stateMessage}</div>
           )}
         </form>
-        <div className="flex-1 flex flex-col justify-end items-end">
+        <div className="flex-1 flex flex-col lg:justify-end lg:items-end">
           <Social />
         </div>
       </div>
