@@ -1,6 +1,7 @@
 import Image from "next/image";
+import "./styles.scss";
 
-export function Social() {
+export function Social({ type }: { type: "full" | "simple" }) {
   const social = [
     {
       name: "GitHub",
@@ -10,24 +11,34 @@ export function Social() {
     },
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/in/abhner-ara%C3%BAjo-069402b6/",
+      url: "https://www.linkedin.com/in/abhneraraujo/",
       icon: "/svg/linkedin.svg",
       profile: "Abhner Araújo",
     },
   ];
   return (
-    <div className="flex gap-4">
+    <div
+      className={(type === "full" ? "flex-col" : "flex-rol") + " flex gap-4"}
+    >
       {social.map((s) => (
-        <a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer">
-          <Image
-            title={s.profile}
-            src={s.icon}
-            className="size-8"
-            alt={s.name}
-            width={0}
-            height={0}
-          />
-        </a>
+        <div key={s.name}>
+          <a
+            className="flex flex-row gap-4 items-center w-fit"
+            href={s.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              title={s.profile}
+              src={s.icon}
+              className="size-8"
+              alt={s.name}
+              width={0}
+              height={0}
+            />
+            {type === "full" && <span>{s.profile}</span>}
+          </a>
+        </div>
       ))}
     </div>
   );

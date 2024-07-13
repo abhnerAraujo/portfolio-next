@@ -12,19 +12,25 @@ import { Textarea } from "../textarea";
 const orbitron = Orbitron({ subsets: ["latin"], weight: "600" });
 
 export function Footer() {
-  const heading2Class = "text-4xl " + orbitron.className;
+  const heading2Class = "mb-8 text-4xl " + orbitron.className;
   const { isSubmitting, stateMessage, sendEmail } = useEmail();
 
   useEffect(() => {}, [isSubmitting, stateMessage]);
 
   return (
-    <div className="flex flex-col gap-8 px-10 lg:max-w-screen-xl w-full lg:m-auto">
-      <h2 id="contact" className={heading2Class}>
-        Contact Me
-      </h2>
-
-      <div className="flex flex-col-reverse lg:flex-row gap-10">
-        <form className="lg:w-1/2 w-full flex-1" onSubmit={sendEmail}>
+    <div className="flex flex-col lg:flex-row gap-8 px-10 lg:max-w-screen-xl w-full lg:m-auto">
+      <div className="lg:flex-1">
+        <h2 id="find-me" className={heading2Class}>
+          Find Me
+        </h2>
+        <Social type="full" />
+      </div>
+      <div className="divider"></div>
+      <div className="lg:flex-1 flex flex-col">
+        <h2 id="contact" className={heading2Class}>
+          Contact me
+        </h2>
+        <form className="w-full flex-1" onSubmit={sendEmail}>
           <div className="grid w-full mb-4">
             <div className="flex align-baseline justify-between">
               <label>Email</label>
@@ -61,16 +67,13 @@ export function Footer() {
 
           <div className="flex justify-end">
             <Button.Root type="flat">
-              <button className="w-full lg:w-fit">Send</button>
+              <button className="w-full lg:w-2/5">Send</button>
             </Button.Root>
           </div>
           {stateMessage && (
             <div className="text-center text-lg mt-4">{stateMessage}</div>
           )}
         </form>
-        <div className="flex-1 flex flex-col lg:justify-end lg:items-end">
-          <Social />
-        </div>
       </div>
     </div>
   );

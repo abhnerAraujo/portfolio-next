@@ -1,17 +1,29 @@
+@use 'sass:color';
+@import 'variables.module';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import 'variables.module';
+:root {
+  --background-color: #{$dark-blue-base};
+  --primary-color: #{$dark-blue-base};
+  --secondary-color: #{$purple-base};
+  --accent-color: #{$pink-base};
+  --secondary-color-light: #{lighten($purple-base, .2)};
+  --secondary-color-dark: #{darken($purple-base, .8)};
+  --primary-font-color: white;
+  --secondary-font-color: black;
+  --divider-color: #{$pink-base};
+}
 
 body {
-  color: rgb(255, 255, 255);
+  color: var(--primary-font-color);
   background: linear-gradient(
       to bottom,
       transparent,
-      rgb(9, 24, 51)
+      var(--background-color)
     )
-    rgb(9, 24, 51);
+    var(--background-color);
   scroll-behavior: smooth;
 }
 
@@ -22,7 +34,7 @@ body {
 }
 
 footer {
-  background-color: rgb(39, 41, 50);
+  background-color: var(--secondary-color-dark);
 }
 
 h2 {

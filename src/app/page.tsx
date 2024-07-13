@@ -10,12 +10,11 @@ import { Social } from "./components/social";
 const orbitronRegular = Orbitron({ subsets: ["latin"], weight: "400" });
 const orbitroSemibold = Orbitron({ subsets: ["latin"], weight: "600" });
 const chivoBold = Chivo({ subsets: ["latin"], weight: "700" });
-const heading2Class =
-  "text-4xl text-center lg:text-start " + orbitroSemibold.className;
+const heading2Class = "text-4xl mb-6 " + orbitroSemibold.className;
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col justify-between gap-20 mb-10">
+    <main className="flex min-h-screen flex-col justify-between gap-20 mb-28">
       <AboutSection />
       <div className="flex flex-col gap-10 px-6 lg:max-w-screen-xl lg:m-auto">
         <SkillsSection />
@@ -40,10 +39,7 @@ function SkillsSection() {
 
   return (
     <>
-      <section
-        id="skills"
-        className="mb-10 flex flex-col lg:flex-row gap-10 justify-between align-center"
-      >
+      <section id="skills" className="mb-20">
         <h2 className={heading2Class}>SKILLS</h2>
         <div className="flex-1 flex flex-col lg:grid lg:grid-cols-3 gap-y-10 gap-x-20">
           {skills.map((skill, idx) => (
@@ -98,7 +94,7 @@ function AboutSection() {
             <h1 className={heading1Class}>Nice to meet you!</h1>
           </div>
           <div className="flex justify-center lg:justify-start">
-            <Social />
+            <Social type="simple" />
           </div>
           <div>
             <p className="text-2xl text-center lg:text-start mt-3 mb-3">
@@ -148,16 +144,13 @@ function ProjectsSection() {
     },
   ];
   return (
-    <section
-      id="projects"
-      className="flex flex-col-reverse lg:flex-row gap-10 justify-between align-center"
-    >
+    <section id="projects">
+      <h2 className={heading2Class + " text-center"}>PROJECTS</h2>
       <div className="flex-1 grid grid-cols-1 gap-10 lg:grid-cols-2">
         {projects.map((project, idx) => (
           <Project project={project} key={idx} />
         ))}
       </div>
-      <h2 className={heading2Class}>PROJECTS</h2>
     </section>
   );
 }

@@ -1,23 +1,20 @@
-@import "variables.module";
-
 @mixin baseInput {
-  background: rgba($primary-color-800, .8);
+  background: white;
   outline: none;
-  color: $secondaryFontColor;
-  border-bottom: 3px solid $primary-color-800;
+  color: var(--secondary-font-color) !important;
+  border-bottom: 3px solid var(--accent-color-light);
   transition: box-shadow 0.3s;
 
   &:focus {
-    box-shadow: -8px 8px 0px 0px rgba($primary-color-800, 1);
-    background: rgba($primary-color-800, .4)
+    box-shadow: -8px 8px 0px 0px var(--accent-color);
+    background: white;
   }
 
   &:active {
     box-shadow: none;
-    background: rgba($primary-color-800, .6);
   }
 
   &:not(:focus).-dirty {
-    border-bottom: 3px solid $primary-color;
+    border-bottom: 3px solid var(--accent-color);
   }
 }

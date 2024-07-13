@@ -2,8 +2,8 @@
 
 
 .project-card {
-  background: rgba($purple, .7);
-  border: 3px solid $primary-color;
+  background: var(--secondary-color);
+  border: 3px solid var(--primary-color);
   
   &:hover {
     border: 3px solid transparent;
